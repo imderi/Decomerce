@@ -4,7 +4,7 @@ import { AntDesign } from "@expo/vector-icons";
 // NAVIGATION
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-// OTHERS NAVIGATOR
+// OTHERS NAVIGATOR *NOT YET IMPLEMENTED
 
 // SCREENS *TEMPORARY
 import { HomeScreen } from "../screens/home/home.screen";
