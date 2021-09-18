@@ -1,6 +1,6 @@
-# Decomerce e-commerce react native app
+# Decommerce e-commerce react native app
 
-Decomerce is a React Native ecomerce app
+Decommerce is a React Native ecomerce app
 
 ## Installation
 
