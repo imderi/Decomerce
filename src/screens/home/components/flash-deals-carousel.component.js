@@ -16,13 +16,24 @@ const SLIDERDATA = [
   {
     title: "Third Item",
   },
+  {
+    title: "Second Item",
+  },
+  {
+    title: "Third Item",
+  },
 ];
 
+const SliderContainer = styled.View`
+  background-color: white;
+  justify-content: center;
+`;
+
 const SliderItemContainer = styled.View`
-  width: 350px;
-  height: 200px;
+  width: 125px;
+  height: 150px;
   background-color: green;
-  margin-right: 16px;
+  margin: 20px 10px 20px 10px;
 `;
 
 const SliderItem = ({ item }) => {
@@ -34,13 +45,15 @@ const SliderItem = ({ item }) => {
   );
 };
 
-export const Carousel = () => {
+export const FlashDealsCarousel = () => {
   return (
-    <RowFlatList
-      horizontal={true}
-      data={SLIDERDATA}
-      renderItem={(item) => <SliderItem {...item} />}
-      keyExtractor={(item) => item.title + item.index}
-    />
+    <SliderContainer>
+      <RowFlatList
+        horizontal={true}
+        data={SLIDERDATA}
+        renderItem={(item) => <SliderItem {...item} />}
+        keyExtractor={(item, index) => item.title + index}
+      />
+    </SliderContainer>
   );
 };
