@@ -5,13 +5,13 @@ import { AntDesign } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 // OTHERS NAVIGATOR *NOT YET IMPLEMENTED
+import { AccountNavigator } from "./account.navigator";
 
 // SCREENS *TEMPORARY
 import { HomeScreen } from "../screens/home/home.screen";
 import { CategoryScreen } from "../screens/category/category.screen";
 import { CartScreen } from "../screens/cart/cart.screen";
 import { TransactionScreen } from "../screens/transaction/transaction.screen";
-import { AccountScreen } from "../screens/account/account.screen";
 
 // NAVIGATION - TAB
 const Tab = createBottomTabNavigator();
@@ -31,12 +31,13 @@ export const AppNavigator = () => {
             iconName = "shoppingcart";
           } else if (route.name === "TransactionStacks") {
             iconName = "profile";
-          } else if (route.name === "AccountStacks") {
+          } else if (route.name === "AccountNavigator") {
             iconName = "user";
           }
 
           return <AntDesign name={iconName} size={size} color={color} />;
         },
+        headerShown: false,
       })}
     >
       <Tab.Screen
@@ -60,9 +61,9 @@ export const AppNavigator = () => {
         component={TransactionScreen}
       />
       <Tab.Screen
-        name="AccountStacks"
+        name="AccountNavigator"
         options={{ title: "Account" }}
-        component={AccountScreen}
+        component={AccountNavigator}
       />
     </Tab.Navigator>
   );

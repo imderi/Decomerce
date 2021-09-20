@@ -1,6 +1,11 @@
 import React from "react";
+import { SafeArea } from "../../components/safe-area.component";
 import { Text } from "react-native";
 
 export const CategoryScreen = () => {
-  return <Text>Category</Text>;
+  return (
+    <SafeArea>
+      <Text>Category</Text>
+    </SafeArea>
+  );
 };
