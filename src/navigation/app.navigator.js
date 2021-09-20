@@ -38,6 +38,8 @@ export const AppNavigator = () => {
           return <AntDesign name={iconName} size={size} color={color} />;
         },
         headerShown: false,
+        tabBarActiveTintColor: "black",
+        tabBarInactiveTintColor: "gray",
       })}
     >
       <Tab.Screen
