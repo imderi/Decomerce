@@ -6,8 +6,7 @@ const RowFlatList = styled(FlatList).attrs({
   alignItems: "flex-end",
 })`
   flex-grow: 1;
-  height: 300px;
-  background-color: blue;
+  background-color: white;
 `;
 
 const SLIDERDATA = [
@@ -25,8 +24,8 @@ const SLIDERDATA = [
 const SliderItemContainer = styled.View`
   width: 350px;
   height: 200px;
-  background-color: green;
-  margin-right: 16px;
+  background-color: skyblue;
+  margin: 10px 10px 10px 0px;
 `;
 
 const SliderItem = ({ item }) => {

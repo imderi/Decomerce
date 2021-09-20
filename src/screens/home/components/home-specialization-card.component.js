@@ -36,7 +36,15 @@ const PROMODATA = [
   { title: "All Promo", icon: "chart-bubble" },
 ];
 
+const dataarray = [9, 1, 4, 6, 7, 8];
+
 export const HomeSpecializationCard = () => {
+  dataarray.sort((z, a) => {
+    return a - z;
+  });
+
+  console.log(dataarray);
+
   return (
     <CardContainer>
       <Title>#BESTDEAL</Title>
