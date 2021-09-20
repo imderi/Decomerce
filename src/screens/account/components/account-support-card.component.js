@@ -1,12 +1,12 @@
 import React from "react";
-import { RoundContainer } from "../../../components/round-container.component";
+import { CardContainer } from "../../../components/card-container.component";
 import { Text } from "react-native-paper";
 
 export const AccountSupportCard = () => {
   return (
-    <RoundContainer>
+    <CardContainer>
       <Text>Help Center</Text>
       <Text>Your solution here</Text>
-    </RoundContainer>
+    </CardContainer>
   );
 };

@@ -8,6 +8,6 @@ const Wrapper = styled.View`
   background-color: white;
 `;
 
-export const RoundContainer = ({ children }) => {
+export const CardContainer = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };

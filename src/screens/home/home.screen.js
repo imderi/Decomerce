@@ -1,13 +1,16 @@
 import React from "react";
 import { SafeArea } from "../../components/safe-area.component";
-import { Text } from "react-native";
-import { HomeSlider } from "../../components/home-slider.component";
+import { ScrollView } from "react-native";
+import { Carousel } from "../../components/carousel.component";
+import { HomeInfoCard } from "./components/home-info-card.component";
 
 export const HomeScreen = () => {
   return (
     <SafeArea>
-      <HomeSlider />
-      <Text>Home Screen</Text>
+      <ScrollView>
+        <Carousel />
+        <HomeInfoCard />
+      </ScrollView>
     </SafeArea>
   );
 };

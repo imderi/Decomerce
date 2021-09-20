@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export const HomeSlider = () => {
+export const HomeInfoCard = () => {
   return (
     <View>
-      <Text>Ini Slider</Text>
+      <Text>Info Card</Text>
     </View>
   );
 };
