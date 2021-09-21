@@ -8,10 +8,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AccountNavigator } from "./account.navigator";
 
 // SCREENS *TEMPORARY
-import { HomeScreen } from "../screens/home/home.screen";
-import { CategoryScreen } from "../screens/category/category.screen";
-import { CartScreen } from "../screens/cart/cart.screen";
-import { TransactionScreen } from "../screens/transaction/transaction.screen";
+import { HomeScreen } from "../features/home/screen/home.screen";
+import { CategoryScreen } from "../features/category/category.screen";
+import { CartScreen } from "../features/cart/cart.screen";
+import { TransactionScreen } from "../features/transaction/transaction.screen";
 
 // NAVIGATION - TAB
 const Tab = createBottomTabNavigator();

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { CardContainer } from "../../../components/card-container.component";
+import { Card } from "../../../components/card.component";
 import { Spacer } from "../../../components/spacer.component";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -13,7 +13,7 @@ const TextInfo = styled.Text`
 export const HomeInfoCard = () => {
   return (
     <Spacer position="top" size="large">
-      <CardContainer horizontal={true}>
+      <Card horizontal={true}>
         <Spacer position="right" size="small">
           <Ionicons
             name="information-circle-outline"
@@ -24,7 +24,7 @@ export const HomeInfoCard = () => {
         <TextInfo>
           Due to COVID-19 pandemic, delivery may be a bit longer than normal
         </TextInfo>
-      </CardContainer>
+      </Card>
     </Spacer>
   );
 };

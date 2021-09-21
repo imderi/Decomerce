@@ -1,13 +1,19 @@
 import React from "react";
 import styled from "styled-components/native";
-import { Searchbar } from "react-native-paper";
+import { SafeArea } from "../../../components/safe-area.component";
 import { Ionicons } from "@expo/vector-icons";
 
-const SafeSearchContainer = styled.SafeAreaView`
+const SearchSafeArea = styled(SafeArea)`
   background-color: black;
 `;
 
-const FavoriteButton = styled.View`
+const ItemWrapper = styled.View`
+  flex-direction: row;
+  background-color: black;
+  padding: 10px;
+`;
+
+const AppIcon = styled.View`
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -15,29 +21,23 @@ const FavoriteButton = styled.View`
   margin-right: 10px;
 `;
 
-const ItemWrapper = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-`;
-
 const SearchBarButton = styled.TouchableOpacity`
   flex: 1;
   height: 40px;
   border-radius: 5px;
-  background-color: white;
+  background-color: lightgrey;
 `;
 
 export const HomeSearchBar = () => {
   return (
-    <SafeSearchContainer>
+    <>
+      <SearchSafeArea />
       <ItemWrapper>
-        <FavoriteButton>
+        <AppIcon>
           <Ionicons name="md-logo-react" size={40} color="white" />
-        </FavoriteButton>
+        </AppIcon>
         <SearchBarButton />
       </ItemWrapper>
-    </SafeSearchContainer>
+    </>
   );
 };

@@ -1,14 +1,14 @@
 import React from "react";
 import { Text } from "react-native-paper";
-import { CardContainer } from "../../../components/card-container.component";
+import { Card } from "../../../components/card.component";
 
 export const AccountFeaturesCard = () => {
   return (
-    <CardContainer>
+    <Card>
       <Text>Watchlist</Text>
       <Text>Last Seen</Text>
       <Text>Message / Products Discussion</Text>
       <Text>Review</Text>
-    </CardContainer>
+    </Card>
   );
 };

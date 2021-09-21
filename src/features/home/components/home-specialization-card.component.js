@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { CardContainer } from "../../../components/card-container.component";
+import { Card, CardHeader } from "../../../components/card.component";
 import { ScrollView } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Spacer } from "../../../components/spacer.component";
@@ -9,7 +9,6 @@ const Title = styled.Text`
   font-size: 18px;
   font-weight: 500;
   color: orange;
-  margin-bottom: 10px;
 `;
 
 const ButtonText = styled.Text`
@@ -19,7 +18,7 @@ const ButtonText = styled.Text`
 const PromoButton = styled.TouchableOpacity`
   background-color: #fcf79a;
   margin-right: 10px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 15px 0px 15px;
   height: 30px;
   border-radius: 15px;
   border-width: 1px;
@@ -36,18 +35,12 @@ const PROMODATA = [
   { title: "All Promo", icon: "chart-bubble" },
 ];
 
-const dataarray = [9, 1, 4, 6, 7, 8];
-
 export const HomeSpecializationCard = () => {
-  dataarray.sort((z, a) => {
-    return a - z;
-  });
-
-  console.log(dataarray);
-
   return (
-    <CardContainer>
-      <Title>#BESTDEAL</Title>
+    <Card>
+      <CardHeader>
+        <Title>#BESTDEAL</Title>
+      </CardHeader>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {PROMODATA.map((item, index) => (
           <PromoButton key={item.icon + index}>
@@ -62,6 +55,6 @@ export const HomeSpecializationCard = () => {
           </PromoButton>
         ))}
       </ScrollView>
-    </CardContainer>
+    </Card>
   );
 };
