@@ -16,7 +16,7 @@ import { TransactionScreen } from "../features/transaction/transaction.screen";
 // NAVIGATION - TAB
 const Tab = createBottomTabNavigator();
 
-export const AppNavigator = () => {
+export const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -40,6 +40,14 @@ export const AppNavigator = () => {
         headerShown: false,
         tabBarActiveTintColor: "black",
         tabBarInactiveTintColor: "gray",
+        tabBarStyle: {
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          elevation: 0,
+        },
       })}
     >
       <Tab.Screen

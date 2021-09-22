@@ -25,7 +25,14 @@ const SearchBarButton = styled.TouchableOpacity`
   flex: 1;
   height: 40px;
   border-radius: 5px;
-  background-color: lightgrey;
+  background-color: white;
+  justify-content: center;
+`;
+
+const SearchPlaceholder = styled.Text`
+  color: grey;
+  font-size: 16px;
+  margin-left: 12px;
 `;
 
 export const HomeSearchBar = () => {
@@ -36,7 +43,9 @@ export const HomeSearchBar = () => {
         <AppIcon>
           <Ionicons name="md-logo-react" size={40} color="white" />
         </AppIcon>
-        <SearchBarButton />
+        <SearchBarButton>
+          <SearchPlaceholder>Search something...</SearchPlaceholder>
+        </SearchBarButton>
       </ItemWrapper>
     </>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Text, FlatList } from "react-native";
+import { FlatList } from "react-native";
 
 const RowFlatList = styled(FlatList).attrs({
-  alignItems: "flex-end",
+  // alignItems: "flex-end",
 })`
   flex-grow: 1;
   background-color: white;
@@ -12,29 +12,33 @@ const RowFlatList = styled(FlatList).attrs({
 const SLIDERDATA = [
   {
     title: "First Item",
+    image: require("../../../../assets/home-slide-carousel-items/1.jpeg"),
   },
   {
     title: "Second Item",
+    image: require("../../../../assets/home-slide-carousel-items/2.jpeg"),
   },
   {
     title: "Third Item",
+    image: require("../../../../assets/home-slide-carousel-items/3.jpeg"),
+  },
+  {
+    title: "Fourth Item",
+    image: require("../../../../assets/home-slide-carousel-items/4.jpeg"),
   },
 ];
 
-const SliderItemContainer = styled.View`
-  width: 350px;
-  height: 200px;
-  background-color: skyblue;
-  margin: 10px 10px 10px 0px;
+const SliderImage = styled.Image.attrs({
+  resizeMode: "cover",
+})`
+  width: 320px;
+  height: 210px;
+  margin-right: 10px;
 `;
 
 const SliderItem = ({ item }) => {
-  const { title } = item;
-  return (
-    <SliderItemContainer>
-      <Text>{title}</Text>
-    </SliderItemContainer>
-  );
+  const { image } = item;
+  return <SliderImage source={image} />;
 };
 
 export const HomeSliderCarouse = () => {

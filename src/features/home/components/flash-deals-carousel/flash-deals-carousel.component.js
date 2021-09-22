@@ -18,11 +18,11 @@ export const FlashDealsCarousel = () => {
   // GET PRODUCTS DATA
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://fakestoreapi.com/products?limit=5")
-      .then((response) => response.json())
-      .then((json) => {
+    axios
+      .get("http://fakestoreapi.com/products?limit=5")
+      .then((res) => {
         setIsLoading(false);
-        setProducts(json);
+        setProducts(res.data);
       })
       .catch((err) => {
         setIsLoading(false);
@@ -35,7 +35,6 @@ export const FlashDealsCarousel = () => {
       <CardHeader>
         <HeaderTitle>FLASH DEAL!</HeaderTitle>
       </CardHeader>
-
       {isLoading && <Text>Lagi Loading</Text>}
       {!products && <Text>No Data!</Text>}
       <FlatList

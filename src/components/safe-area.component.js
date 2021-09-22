@@ -1,6 +1,5 @@
 import styled from "styled-components/native";
-import { Platform } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import { Platform, StatusBar } from "react-native";
 import { SafeAreaView } from "react-native";
 
 export const SafeArea = styled(SafeAreaView)`
